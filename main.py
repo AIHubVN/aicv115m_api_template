@@ -7,12 +7,8 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     if args.action == "train":
-        """
-        Add script to train model here
-        """
-        pass
+        from modules.example_train import train
+        train()
     if args.action == "submit":
-        """
-        Add script to create submission here
-        """
-        pass
+        from modules.example_submit import create_submission
+        create_submission()
