@@ -9,3 +9,5 @@ class Config:
 
     WEIGHT_PATH = Path("./weights")
     WEIGHT_PATH.mkdir(parents=True, exist_ok=True)
+
+    SUBMISSION_PATH = Path("./submissions")

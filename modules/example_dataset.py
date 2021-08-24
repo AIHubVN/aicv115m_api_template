@@ -1,5 +1,4 @@
 import numpy as np
-import pandas as pd
 from scipy.io import wavfile
 
 from modules.example_feature import Features

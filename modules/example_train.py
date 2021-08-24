@@ -1,10 +1,11 @@
 import joblib
 import lightgbm as lgb
+import pandas as pd
 from sklearn.metrics import roc_auc_score
 from sklearn.model_selection import train_test_split
 
 from configs.example_config import Config
-from modules.example_dataset import prepare_training_data
+from modules.example_dataset import make_acoustic_feat
 
 
 def prepare_training_data(Config):
