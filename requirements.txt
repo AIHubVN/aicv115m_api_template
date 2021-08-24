@@ -5,3 +5,6 @@ joblib==1.0.1
 scikit-learn==0.24.2
 lightgbm==3.2.1
 librosa==0.8.1
+pandas
+aiofiles
+python-multipart
