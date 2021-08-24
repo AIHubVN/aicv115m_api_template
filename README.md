@@ -17,7 +17,7 @@ api_template
 │   README.md
 │   process.py - main script to process and predict results
 │   serve.py - main script to start API
-│   run_server.sh
+│   main.py - main script to start train or create submission
 │
 └───data/ - datasets are saved here
 │   │   ...
@@ -37,25 +37,37 @@ api_template
 │   │   tutorial.md
 │   │   ...
 │
+scripts/ - command use for train, create submission, run service
+│   │   run_train.sh
+│   │   run_submission.sh
+│   │   run_service.sh
+│
 ```
 
 A few important files you need to pay attention and modify:
-1. `process.py`: Rewrite the "predict" function to match your source code
-2. `docs/tutorials.md`: Write a few lines about how to train, test and inference using API with dataset
-3. Put all your source code in `modules` folder and your config in `configs` folder.
+1. `process.py`: Rewrite the "predict" function to match your source code.
+2. `main.py`: Add your function to train and create submission here.
+3. `docs/tutorials.md`: Write a few lines about how to train, test and inference using API with dataset.
+4. Put all your source code in `modules` folder and your config in `configs` folder.
+
+## Training
+
+After processing and refactoring the source code, try training the model:
+
+```bash
+chmod +x scripts/run_train.sh
+./scripts/run_train.sh
+```
 
 ## Testing
 
-After processing and refactoring the source code, you can start API in the following ways:
+After processing and refactoring the source code, you can start API in the following way:
 
 ```bash
-python serve.py
+chmod +x scripts/run_service.sh
+./scripts/run_service.sh
 ```
-or
-```bash
-chmod +x run_server.sh
-./run_server.sh
-```
+
 View more details and test API at http://localhost:8000/docs
 
 Or test API using python script:
@@ -95,6 +107,14 @@ files = {
 
 response = requests.post(url, headers=headers, files=files).json()
 print(response)
+```
+
+## Submit
+You can create submission by:
+
+```bash
+chmod +x scripts/run_submission.sh
+./scripts/run_submission.sh
 ```
 
 ## Acknowledgements
