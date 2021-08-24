@@ -1,6 +1,10 @@
 import os
 from pydub import AudioSegment
 
+import joblib
+from configs.example_config import Config
+from modules.example_dataset import make_acoustic_feat
+
 
 def convert_to_wav(file_path):
     """
@@ -35,4 +39,7 @@ def predict(df):
         assessment (float): class/probability
 
     """
-    pass
+    feat = make_acoustic_feat(df)
+    model = joblib.load(str(Config.WEIGHT_PATH / "example_model.h5"))
+    positive_proba = model.predict_proba(feat)[0][1]
+    return positive_proba
