@@ -118,4 +118,5 @@ chmod +x scripts/run_submission.sh
 ```
 
 ## Acknowledgements
-This template is used to assist the teams participating in ["AICovidVN 115M Challenge"](https://aihub.vn/competitions/22) to submit the final solution according to the organizer's standards.
+- This template is used to assist the teams participating in ["AICovidVN 115M Challenge"](https://aihub.vn/competitions/22) to submit the final solution according to the organizer's standards.
+- Feature Extractors are employed from https://github.com/nutiapps/aicovidvn115m.
