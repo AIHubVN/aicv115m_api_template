@@ -1,0 +1,7 @@
+.vscode/
+__pycache__/
+__MACOSX/
+.ipynb_checkpoints/
+.idea
+.env
+assets/
