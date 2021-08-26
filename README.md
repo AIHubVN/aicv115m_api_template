@@ -60,12 +60,19 @@ chmod +x scripts/run_train.sh
 ```
 
 ## Testing
-
+### 01. Run serving on host machine
 After processing and refactoring the source code, you can start API in the following way:
 
 ```bash
 chmod +x scripts/run_service.sh
 ./scripts/run_service.sh
+```
+
+### 02. Build and run with Docker
+- How to install docker-compose: check this [guideline](https://docs.docker.com/compose/install/).
+- Build and start serving:
+```bash
+docker-compose up
 ```
 
 View more details and test API at http://localhost:8000/docs
