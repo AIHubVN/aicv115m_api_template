@@ -1,0 +1,16 @@
+version: '3'
+services:
+  aicv115-app:
+    restart: always
+    build: .
+    ports:
+      - "8000:8000"
+    networks:
+      - aicv115m_network
+    volumes:
+      - ./data:/data
+      - ./assets:/assets
+      - ./weights:/weights
+networks:
+  aicv115m_network:
+    driver: bridge
