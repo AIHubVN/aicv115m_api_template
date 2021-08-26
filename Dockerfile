@@ -3,20 +3,16 @@
 # 26 Aug 2021
 
 # base image
-FROM python:3.7.11
-
-EXPOSE 8000
+FROM tiangolo/uvicorn-gunicorn-fastapi:python3.8-slim
 
 # set the working directory
 WORKDIR .
+COPY requirements.txt ./
+
+RUN apt update && apt install ffmpeg libsndfile1 --yes --no-install-recommends && \
+    pip install --upgrade pip && pip install -r requirements.txt
+
 COPY ./ .
-
-RUN apt update
-RUN apt install ffmpeg libsndfile1 --yes
-RUN pip install --upgrade pip
-
-# install dependencies
-RUN pip install -r requirements.txt
 
 # start serving
 CMD python3 serve.py
