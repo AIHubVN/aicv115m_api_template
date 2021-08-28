@@ -1,6 +1,10 @@
 # AICovidVN API Template
 
-This template using [FastAPI](https://fastapi.tiangolo.com/) to create API.
+This template using [FastAPI](https://fastapi.tiangolo.com/) to create API. A valid solution submission needs to:
+- Execute successfully 3 scripts under scripts/.
+- Execute `docker-compose up` command to start serving.
+
+You're free to fork this template and apply it to your team's solution. Then you can send back the solution as a .zip file. More information will be provided via email.
 
 ## Requirements
 * uvicorn
